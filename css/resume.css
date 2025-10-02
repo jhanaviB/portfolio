@@ -47,8 +47,114 @@ h2 {
 .list-social-icons a {
   color: #495057;
 }
+
 .list-social-icons a:hover {
   color: #bd5d38;
+}
+
+/* Project cards styling */
+.card.resume-item {
+  min-height: 450px !important;
+  margin-bottom: 2rem;
+  display: flex !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Projects section container */
+#projects {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.card.resume-item .resume-content {
+  flex: 0 0 300px;
+  max-width: 300px;
+}
+
+.card.resume-item .resume-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.card.resume-item .resume-logo img {
+  width: 15rem !important;
+  height: 15rem !important;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card.resume-item .resume-date {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.card.resume-item .resume-date p {
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+/* Ensure consistent button positioning */
+.card.resume-item .resume-date a {
+  margin-top: auto;
+}
+
+/* Force equal height for all project cards */
+#projects .card.resume-item {
+  height: 450px !important;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 300px;
+}
+
+/* Ensure text content area uses available space properly */
+#projects .card.resume-item .resume-date p {
+  overflow-y: auto;
+  max-height: 280px;
+}
+
+/* Media queries for responsive card widths */
+@media (max-width: 768px) {
+  #projects .card.resume-item {
+    height: auto !important;
+    min-height: 400px;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column !important;
+  }
+  
+  #projects .card.resume-item .resume-content {
+    flex: none;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  #projects .card.resume-item .resume-date {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #projects .card.resume-item {
+    width: 100%;
+    max-width: 900px;
+    min-width: 600px;
+  }
+}
+
+@media (min-width: 1025px) {
+  #projects .card.resume-item {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 800px;
+  }
 }
 .list-social-icons a .fa-lg {
   font-size: 1.75rem;
